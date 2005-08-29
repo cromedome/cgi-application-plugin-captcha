@@ -1,0 +1,9 @@
+--- #YAML:1.0
+name: CGI-Application-Plugin-CAPTCHA
+version: 0.01
+author:
+  - Jason A. Crome <cromedome@cpan.org>
+abstract: Easily create, use, and verify CAPTCHAs in
+CGI::Application-based web applications.
+license: perl
+generated_by: Module::Build version 0.2611, without YAML.pm
