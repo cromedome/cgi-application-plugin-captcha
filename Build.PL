@@ -10,7 +10,6 @@ my $builder = Module::Build->new(
     requires => {
         'Test::More'        => 0,
         'CGI::Application'  => '>= 4.00',
-        'Module::Build'     => 0,
         'GD::SecurityImage' => 0,
     },
     create_makefile_pl  => 'traditional',
