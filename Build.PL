@@ -16,6 +16,11 @@ my $builder = Module::Build->new(
         'Test::More'        => 0,
         'Test::Exception'   => 0,
     },
+    meta_merge => {
+        resources => {
+            repository => 'http://github.com/rjbs/mime-lite'
+        }
+    },
     create_makefile_pl  => 'traditional',
     create_readme       => 1,
     add_to_cleanup      => [ 'CGI-Application-Plugin-CAPTCHA-*' ],
