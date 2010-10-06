@@ -1,5 +1,7 @@
 Revision history for CGI-Application-Plugin-CAPTCHA
 
+        Skip some tests if Test::WWW::Mechanize is not available (RT#17146, by ZACKSE)
+
 0.01    Date/time
         First version, released on an unsuspecting world.
 

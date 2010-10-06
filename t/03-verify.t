@@ -2,8 +2,12 @@
 
 use strict;
 use warnings;
-use Test::More tests => 7;
-use Test::WWW::Mechanize;
+BEGIN {
+    eval "use Test::WWW::Mechanize";
+    plan skip_all => "Test::WWW::Mechanize required for tests" if $@;
+}
+
+plan tests => 7;
 
 # Bring in testing hierarchy
 use lib './t';
