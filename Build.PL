@@ -10,6 +10,7 @@ my $builder = Module::Build->new(
     requires => {
         'CGI::Application'  => '>= 4.00',
         'GD::SecurityImage' => 0,
+        'Data::Random'      => 0,
     },
     build_requires => {
         'Test::More'        => 0,
