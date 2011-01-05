@@ -8,7 +8,7 @@ my $builder = Module::Build->new(
     dist_author         => 'Jason A. Crome <cromedome@cpan.org>',
     dist_version_from   => 'lib/CGI/Application/Plugin/CAPTCHA.pm',
     requires => {
-        'CGI::Application'  => '>= 4.00',
+        'CGI::Application'  => '4.00',
         'GD::SecurityImage' => 0,
         'Data::Random'      => 0,
     },
