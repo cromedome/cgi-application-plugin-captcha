@@ -1,9 +1,11 @@
-#!perl -T
+#!/usr/bin/env perl -T
 
 use strict;
 use warnings;
+use Test::More;
+
 BEGIN {
-    eval "use Test::WWW::Mechanize";
+    eval { use Test::WWW::Mechanize };
     plan skip_all => "Test::WWW::Mechanize required for tests" if $@;
 }
 
