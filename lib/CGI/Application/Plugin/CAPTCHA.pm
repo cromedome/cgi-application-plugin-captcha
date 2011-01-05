@@ -287,7 +287,10 @@ Patches, questions, and feedback are welcome.
 A big thanks to Cees Hek for providing a great module for me to borrow code 
 from (L<CGI::Application::Plugin::Session>), to Michael Peters and Tony Fraser
 for all of their valuable input, and to the rest who contributed ideas and
-criticisms on the CGI::Application mailing list.
+criticisms on the CGI::Application mailing list.  
+
+Additional thanks to chorny and Cees for the various bug fixes and patches
+they have submitted.
 
 =head1 SEE ALSO
 

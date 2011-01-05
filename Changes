@@ -1,7 +1,10 @@
 Revision history for CGI-Application-Plugin-CAPTCHA
-
+0.02
         Skip some tests if Test::WWW::Mechanize is not available (RT#17146, by ZACKSE)
+        Test tweaks
+        Fixed various issues with Module::Build settings (thanks chorny!)
+        Plugged ugly security hole (thanks, Cees!)
 
-0.01    Date/time
+0.01    Sometime in 2005....
         First version, released on an unsuspecting world.
 
