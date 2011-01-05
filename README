@@ -3,7 +3,7 @@ NAME
     CAPTCHAs in CGI::Application-based web applications.
 
 VERSION
-    Version 0.01
+    Version 0.02
 
 SYNOPSIS
         # In your CGI::Application-based web application module. . .
@@ -158,7 +158,7 @@ SEE ALSO
     <http://en.wikipedia.org/wiki/Captcha>
 
 COPYRIGHT & LICENSE
-    Copyright 2005 Jason A. Crome, all rights reserved.
+    Copyright 2005-2011 Jason A. Crome, all rights reserved.
 
     This program is free software; you can redistribute it and/or modify it
     under the same terms as Perl itself.

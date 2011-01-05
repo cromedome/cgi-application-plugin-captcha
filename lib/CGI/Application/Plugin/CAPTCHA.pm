@@ -22,11 +22,11 @@ CGI::Application-based web applications.
 
 =head1 VERSION
 
-Version 0.01
+Version 0.02
 
 =cut
 
-$VERSION = '0.01';
+$VERSION = '0.02';
 
 =head1 SYNOPSIS
 
@@ -297,7 +297,7 @@ Wikipedia entry for CAPTCHA - L<http://en.wikipedia.org/wiki/Captcha>
 
 =head1 COPYRIGHT & LICENSE
 
-Copyright 2005 Jason A. Crome, all rights reserved.
+Copyright 2005-2011 Jason A. Crome, all rights reserved.
 
 This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.

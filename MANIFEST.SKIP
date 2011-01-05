@@ -7,4 +7,6 @@
 CVS
 ^\.cvsignore$
 \.svn$
+\.git
 
+^MYMETA.yml$
