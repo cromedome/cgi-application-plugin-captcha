@@ -11,6 +11,7 @@ my $builder = Module::Build->new(
         'CGI::Application'  => '4.00',
         'GD::SecurityImage' => 0,
         'Data::Random'      => 0,
+        'Digest::SHA1'      => 0,
     },
     build_requires => {
         'Test::More'        => 0,

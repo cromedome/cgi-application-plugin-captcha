@@ -7,6 +7,7 @@ WriteMakefile
           'PREREQ_PM' => {
                            'CGI::Application' => '4.00',
                            'Data::Random' => 0,
+                           'Digest::SHA1' => 0,
                            'GD::SecurityImage' => 0,
                            'Test::Exception' => 0,
                            'Test::More' => 0

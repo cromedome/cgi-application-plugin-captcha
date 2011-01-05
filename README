@@ -3,7 +3,7 @@ NAME
     CAPTCHAs in CGI::Application-based web applications.
 
 VERSION
-    Version 0.02
+    Version 0.03
 
 SYNOPSIS
         # In your CGI::Application-based web application module. . .

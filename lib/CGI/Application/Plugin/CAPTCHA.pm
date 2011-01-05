@@ -23,11 +23,11 @@ CGI::Application-based web applications.
 
 =head1 VERSION
 
-Version 0.02
+Version 0.03
 
 =cut
 
-$VERSION = '0.02';
+$VERSION = '0.03';
 
 =head1 SYNOPSIS
 

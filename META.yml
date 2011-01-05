@@ -16,12 +16,13 @@ name: CGI-Application-Plugin-CAPTCHA
 provides:
   CGI::Application::Plugin::CAPTCHA:
     file: lib/CGI/Application/Plugin/CAPTCHA.pm
-    version: 0.02
+    version: 0.03
 requires:
   CGI::Application: 4.00
   Data::Random: 0
+  Digest::SHA1: 0
   GD::SecurityImage: 0
 resources:
   license: http://dev.perl.org/licenses/
   repository: http://github.com/rjbs/mime-lite
-version: 0.02
+version: 0.03
