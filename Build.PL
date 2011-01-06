@@ -14,12 +14,13 @@ my $builder = Module::Build->new(
         'Digest::SHA1'      => 0,
     },
     build_requires => {
-        'Test::More'        => 0,
-        'Test::Exception'   => 0,
+        'Test::More'           => 0,
+        'Test::Exception'      => 0,
+        'Test::WWW::Mechanize' => 0,
     },
     meta_merge => {
         resources => {
-            repository => 'http://github.com/rjbs/mime-lite'
+            repository => 'https://github.com/cromedome/cgi-application-plugin-captcha'
         }
     },
     create_makefile_pl  => 'traditional',

@@ -10,7 +10,8 @@ WriteMakefile
                            'Digest::SHA1' => 0,
                            'GD::SecurityImage' => 0,
                            'Test::Exception' => 0,
-                           'Test::More' => 0
+                           'Test::More' => 0,
+                           'Test::WWW::Mechanize' => 0
                          },
           'INSTALLDIRS' => 'site',
           'EXE_FILES' => [],

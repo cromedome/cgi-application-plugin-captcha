@@ -5,6 +5,7 @@ author:
 build_requires:
   Test::Exception: 0
   Test::More: 0
+  Test::WWW::Mechanize: 0
 configure_requires:
   Module::Build: 0.36
 generated_by: 'Module::Build version 0.3603'
@@ -16,7 +17,7 @@ name: CGI-Application-Plugin-CAPTCHA
 provides:
   CGI::Application::Plugin::CAPTCHA:
     file: lib/CGI/Application/Plugin/CAPTCHA.pm
-    version: 0.03
+    version: 0.04
 requires:
   CGI::Application: 4.00
   Data::Random: 0
@@ -24,5 +25,5 @@ requires:
   GD::SecurityImage: 0
 resources:
   license: http://dev.perl.org/licenses/
-  repository: http://github.com/rjbs/mime-lite
-version: 0.03
+  repository: https://github.com/cromedome/cgi-application-plugin-captcha
+version: 0.04

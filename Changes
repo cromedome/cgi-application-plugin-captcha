@@ -1,4 +1,8 @@
 Revision history for CGI-Application-Plugin-CAPTCHA
+0.04    01/07/2011
+        Added GitHub repo link
+        Fixed module dependencies.
+
 0.03    01/04/2011
         Forgot to add Digest::SHA1 to list of dependencies.
         
