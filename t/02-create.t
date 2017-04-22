@@ -9,14 +9,13 @@ BEGIN {
     plan skip_all => "Test::WWW::Mechanize required for tests" if $@;
 }
 
-plan tests => 4;
+plan tests => 5;
 
 # Bring in testing hierarchy
 use lib './t';
 
 # Set up testing webapp
 use TestApp;
-$ENV{CGI_APP_RETURN_ONLY} = 1;
 
 # Set up testing web server
 use CAPCServer;
@@ -44,6 +43,7 @@ CREATE_TESTING:
 
     # Make sure we got a cryptographic hash in a cookie
     my $cookie = $jar->as_string;
+    ok($cookie, 'there is a cookie');
     my ($hash) = $cookie =~ /hash=(.*?);/;
     isnt($hash, "", "Received cryptographic hash in cookie");
 
