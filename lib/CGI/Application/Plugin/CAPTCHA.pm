@@ -155,6 +155,11 @@ for more information.
 
 This specifies the secret that will be used when generating the checksum hash.
 
+=head3 GRAPHICS_LIB
+
+With this you can specify the graphics backend, which shall be used. Possible
+options are 'Magick' for L<Image::Magick> or 'GD' for L<GD>. Default is L<GD>.
+
 =cut
 
 sub captcha_config
