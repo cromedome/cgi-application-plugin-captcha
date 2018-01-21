@@ -2,7 +2,6 @@ package CGI::Application::Plugin::CAPTCHA;
 
 use strict;
 
-use GD::SecurityImage;
 use Digest::SHA1;
 use vars qw($VERSION @EXPORT);
 
@@ -156,6 +155,11 @@ for more information.
 
 This specifies the secret that will be used when generating the checksum hash.
 
+=head3 GRAPHICS_LIB
+
+With this you can specify the graphics backend, which shall be used. Possible
+options are 'Magick' for L<Image::Magick> or 'GD' for L<GD>. Default is L<GD>.
+
 =cut
 
 sub captcha_config
@@ -202,6 +206,13 @@ sub captcha_config
             die "captcha_config() error:  parameter SECRET is not a string" if ref $props->{SECRET};
             $self->{__CAP__CAPTCHA_CONFIG}->{SECRET} = delete $props->{SECRET};
         }
+        
+        # Check for GRAPHICS_LIB
+        if ($props->{GRAPHICS_LIB}) 
+        {
+            die "captcha_config() error:  parameter GRAPHICS_LIB is not a string" if ref $props->{GRAPHICS_LIB};
+            $self->{__CAP__CAPTCHA_CONFIG}->{GRAPHICS_LIB} = delete $props->{GRAPHICS_LIB};
+        }
 
         # Check for DEBUG
         if ($props->{DEBUG}) 
@@ -233,10 +244,14 @@ sub captcha_create
     my %image_options    = %{ $self->{__CAP__CAPTCHA_CONFIG}->{ IMAGE_OPTIONS    } }; 
     my @create_options   = @{ $self->{__CAP__CAPTCHA_CONFIG}->{ CREATE_OPTIONS   } }; 
     my @particle_options = @{ $self->{__CAP__CAPTCHA_CONFIG}->{ PARTICLE_OPTIONS } }; 
+    my $graphics_lib 	 = $self->{__CAP__CAPTCHA_CONFIG}->{ GRAPHICS_LIB };
     my $secret           = $self->{__CAP__CAPTCHA_CONFIG}->{ SECRET } ;
     my $debug            = $self->{__CAP__CAPTCHA_CONFIG}->{ DEBUG  } ;
 
     # Create the CAPTCHA image
+    my $magick = $graphics_lib eq 'Magick' ? 1 : 0;
+    eval "use GD::SecurityImage use_magick => $magick";
+    
     my $image = GD::SecurityImage->new( %image_options );
     $debug == 1 ? $image->random("ABC123") : $image->random;
     $image->create  ( @create_options   );
